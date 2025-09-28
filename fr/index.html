@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ===== Liens sobres + soulignement animé ===== */
+
+    header {
+  display: flex;                   /* Active le mode flex */
+  justify-content: space-between;   /* Espace entre titre et menu */
+  align-items: center;              /* Aligne verticalement au centre */
+  background: #111;
+  color: #fff;
+  padding: 1.5rem;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  margin: 0;                        /* Supprime le marge par défaut */
+  font-size: 1.8rem;                 /* Ajuste si besoin */
+}
+
+header nav {
+  display: flex;                     /* Les liens restent sur une seule ligne */
+}
+
+
+    header nav a {
+      position: relative;
+      margin: 0 1rem;
+      color: #f5f5f5;
+      text-decoration: none; /* PAS de soulignement par défaut */
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    /* Barre invisible par défaut */
+    header nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 13px;       /* espace entre texte et soulignement */
+      width: 100%;
+      height: 1px;
+      background: #4dabf7; /* couleur d’accent */
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover : texte légèrement coloré + soulignement qui s'étend */
+    header nav a:hover {
+      color: #4dabf7;
+    }
+    header nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* ===== Sections de contenu ===== */
+    section {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      color: #4dabf7;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #ccc;
+    }
+
+    /* Bouton exemple */
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      margin-top: 1rem;
+      background: #4dabf7;
+      color: #121212;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #82c0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h2>Mohamed Haady TIEMTORE</h2>
+    <nav>
+        <a href="index.html"><h3>/home</h3></a>
+      <a href="#about"><h3>/About</h3></a>
+      <a href="#projects"><h3>/Projects</h3></a>
+      <a href="#projects"><h3>/Github</h3></a>
+      <a href="#projects"><h3>/Publications</h3></a>
+      <a href="#contact"><h3>/Contact</h3></a>
+    </nav>
+  </header>
+
+  <!-- SECTIONS 
+  <section id="about">
+    <h2>À propos</h2>
+    <p>Bienvenue sur mon site ! Ce portfolio présente mes projets web et mes expériences.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Mes Projets</h2>
+    <p>Voici un petit aperçu de mes réalisations.</p>
+    <a href="#" class="btn">Voir mes projets</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 ton.email@example.com</p>
+  </section>
+
+   FOOTER --> 
+  <footer>
+    Copyright © 2025 - Mohamed Haady TIEMTORE
+  </footer>
+
+</body>
+</html>
