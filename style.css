@@ -6,6 +6,22 @@ body {
   color: #f5f5f5;
 }
 
+html, body {
+  height: 100%;      /* nécessaire pour que le body remplisse toute la fenêtre */
+  margin: 0;         /* supprime les marges par défaut */
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* organise header, main, footer en colonne */
+  min-height: 100vh;      /* force le body à prendre toute la hauteur de l’écran */
+}
+
+main {
+  flex: 1; /* prend tout l’espace disponible entre header et footer */
+}
+
+
 /* Header */
 header {
   background: #111;
